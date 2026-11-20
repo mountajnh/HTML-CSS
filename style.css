@@ -1,0 +1,177 @@
+body {
+    background-color: rgb(164, 212, 240);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/CoolveticaRg.otf);
+}
+
+/* bounce text */
+.bounce { 
+    position: relative;
+    top: 0;
+    animation: bounce 0.3s ease infinite alternate;
+}
+@keyframes bounce { 
+    100% {
+        top: -.2rem;
+    }
+}
+
+/* updates */
+#container {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 10em;
+    padding: 1rem;
+    border-top: 2px dotted rgb(93, 52, 141);
+    margin:0;
+    padding: 4px;
+    }
+
+/* headers */
+h1 {
+    color: rgb(80, 120, 240);
+    text-shadow: 2px 2px #0e0a71;
+    letter-spacing: 3px;
+    font-family: Audiowide;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* centers the whole row horizontally */
+    gap: 30px;
+    margin: 20;
+}
+h1:hover {
+     transform: scale(1.05);
+}
+h2{
+    color: rgb(80, 120, 240);
+    text-shadow: 1px 1px #0e0a71;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: Audiowide;
+    font-size: 18px;
+}
+h2:hover {
+     transform: scale(1.05);
+}
+
+h4 {
+    color: rgb(80, 120, 240);
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* centers the whole row horizontally */
+    font-family: Coolvetica;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+h5 {
+    color: rgb(80, 120, 240);
+    letter-spacing: 2px;
+    text-align: left;
+    font-family: Coolvetica;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    background-image: url("images/background.jpg");
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 170px minmax(0, 1fr) 170px;
+}
+
+
+/* everything */
+header, nav, main, .rightsection, footer, body.gallery-page .mainsection  {
+    background-color: rgb(255, 255, 255, 0.75);
+    border: rgb(93, 52, 141) 2px solid;
+}
+
+header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+}
+nav {
+    border-bottom-left-radius: 20px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    height: max-content;
+}
+
+.content {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column; /* stacks main + guestbook vertically */
+}
+main {
+    height: max-content;
+    font-family: Coolvetica;
+    letter-spacing: 1.3px;
+    color:  #0e0a71;
+    padding: 30px;
+    line-height: 1.8;
+    word-spacing: 4px;
+}
+
+.rightsection {
+    border-bottom-right-radius: 20px;
+    grid-row: 2 / 3;
+    grid-column: 3 / 3;
+    color: #0e0a71;
+}
+footer {
+    text-align: center;
+    grid-row: 4 / 5;
+    grid-column: 1 / 4;
+    border-radius: 20px;
+    font-family: Coolvetica;
+    letter-spacing: 1.3px;
+    color:  #0e0a71;
+    padding: 3px;
+}
+
+/* lists */
+ul {
+    padding: 0; 
+    text-align: center;
+    font-family: Coolvetica;
+    font-size: 18px;
+    line-height: 1.5;
+}
+ul a {
+    color:  #0e0a71;
+    text-decoration: none; /* removes underlines from links */
+}
+ul li::marker {
+    content: none;
+}
+ul li:hover {
+     transform: scale(1.07);
+     border-bottom: 3px solid transparent;
+}
+
+a:link {
+    color: #0e0a71;
+    text-decoration: none; 
+    font-family: Coolvetica;
+    font-size: 16px;
+}
